@@ -1,12 +1,182 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="page">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: {{projectTitle}}</title>
+    <title>Cat Energy – Главная</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
   </head>
-  <body>
-
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS. Адаптивная вёрстка и автоматизация</a>».</p>
-
+  <body class="page__body" >
+    <header class="page-header">
+      <a class="page-header__logo">
+        <img src="img/logo-desktop%201.svg" alt="Кэт Энерджи" width="202" height="59">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <ul class="main-nav__list">
+          <li class="nav__list__item">
+            <a>
+              Главная
+            </a>
+          </li>
+          <li class="nav__list__item">
+            <a href="catalog.html">
+              Каталог продукции
+            </a>
+          </li>
+          <li class="nav__list__item">
+            <a href="program.html">
+              Подобрать программу
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="page-main">
+      <h1 class="visually-hidden">
+        Кэт Энерджи
+      </h1>
+      <section class="intro">
+        <h2 class="intro_header section-header">
+          Функциональное питание для котов
+        </h2>
+        <p class="intro_description">
+          Занялся собой? Займись котом!
+        </p>
+        <a href="program.html" class="intro_program-link">
+          Подобрать программу
+        </a>
+        <img src="img/index-can.png" width="552" height="499" alt="Банка корма с курицей">
+      </section>
+      <section class="users-goal">
+        <h2 class="visually-hidden">Подбор продуктов в зависимости от цели</h2>
+        <div class="users-goal">
+          <h3 class="users-goal__header">
+            Похудение
+          </h3>
+          <p class="users-goal__description">
+            Ваш кот весит больше собаки и почти утратил способность
+            лазить по деревьям? Пора на диету! Cat Energy Slim поможет
+            вашему питомцу сбросить лишний вес.
+          </p>
+          <a href="catalog.html" class="users-goal__catalog-link">
+            Каталог Slim
+          </a>
+        </div>
+        <div class="users-goal">
+          <h3 class="users-goal__header">
+            Набор массы
+          </h3>
+          <p class="users-goal__description">
+            Заработать авторитет среди дворовых котов и даже собак?
+            Серия Cat Energy Pro поможет вашему коту нарастить
+            необходимые мышцы!
+          </p>
+          <a href="catalog.html" class="users-goal__catalog-link">
+            каталог pro
+          </a>
+        </div>
+      </section>
+      <section class="product-description">
+        <h2 class="product-description_header section-header">
+          Как это работает?
+        </h2>
+        <ol class="product-description_steps-list">
+          <li class="product-description_steps-list__item">
+            Функциональное питание
+            содержит только полезные
+            питательные вещества.
+          </li>
+          <li class="product-description_steps-list__item">
+            Выпускается в виде порошка,
+            который нужно лишь залить
+            кипятком и готово.
+          </li>
+          <li class="product-description_steps-list__item">
+            Замените один-два приема
+            обычной еды на наше
+            функциональное питание.
+          </li>
+          <li class="product-description_steps-list__item">
+            Уже через месяц наслаждайтесь
+            изменениями к лучшему
+            вашего питомца!
+          </li>
+        </ol>
+      </section>
+      <section class="live-example">
+        <h2 class="live-example_header section-header">
+          Живой пример
+        </h2>
+        <p class="live-example_description">
+          Борис сбросил 5 кг за 2 месяца, просто заменив свой
+          обычный корм на Cat Energy Slim. Отличный результат
+          без изнуряющих тренировок! При этом он не менял своих
+          привычек и по-прежнему спит по 16 часов в день.
+        </p>
+        <dl class="stats__list">
+          <div class="stats__item">
+            <dt class="stats__number">
+              5 кг
+            </dt>
+            <dd class="stats__description">
+              снижение веса
+            </dd>
+          </div>
+          <div class="stats__item">
+            <dt class="stats__number">
+              60 дней
+            </dt>
+            <dd class="stats__description">
+              затрачено времени
+            </dd>
+          </div>
+        </dl>
+        <span class="stats__result">Затраты на питание: </span>
+        <span class="stats__result">15 000 руб </span>
+        <img src="img/cat-fat.png" alt="Борис до похудения">
+        <img src="img/cat-skinny.png" alt="Борис после похудения">
+      </section>
+      <section class="location">
+        <h2 class="location__header">
+          Приглашаем к сотрудничеству дилеров!
+        </h2>
+        <address class="location__address">
+          <span>
+            ул. Большая
+            Конюшенная, д. 19/8
+          </span>
+          <br>
+          <span>
+            Санкт-Петербург
+          </span>
+        </address>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <div class="page-footer_wrapper">
+        <div class="page-footer_logo">
+          <img src="img/footer-logo%202.svg" alt="Логотип Кэт Энерджи">
+        </div>
+        <div class="page-footer_socials">
+          <a href="https://vk.com/htmlacademy" class="page-footer_socials__item">
+            <img src="img/icon_vkontakte.png" alt="Мы ВКонтакте">
+          </a>
+          <a href="https://www.instagram.com/htmlacademy/" class="page-footer_socials__item">
+            <img src="img/icon_instagram.png" alt="Мы в Инстаграме">
+          </a>
+          <a href="https://www.facebook.com/htmlacademy/" class="page-footer_socials__item">
+            <img src="img/icon_facebook.png" alt="Мы в Фейсбуке">
+          </a>
+        </div>
+        <div class="page-footer_copyright">
+          <span class="visually-hidden">Разработано HTML Academy</span>
+          <a href="https://htmlacademy.ru/">
+            <img src="img/logo_html.png" alt="Сайт HTML Academy">
+          </a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
