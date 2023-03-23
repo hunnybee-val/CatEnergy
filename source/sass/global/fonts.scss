@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "OswaldMedium";
+  src: url("source/fonts/oswaldmedium.woff") format("woff");
+  src: url("source/fonts/oswaldmedium.woff2") format("woff2");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "OswaldRegular";
+  src: url("source/fonts/oswaldregular.woff") format("woff");
+  src: url("source/fonts/oswaldregular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@mixin oswaldRegular(){
+  font-family: "oswaldRegular", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}

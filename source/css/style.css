@@ -1,0 +1,31 @@
+.nav {
+  font-family: "OswaldRegular", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+body {
+  background: tomato;
+}
+
+@font-face {
+  font-family: "OswaldMedium";
+  src: url("source/fonts/oswaldmedium.woff") format("woff");
+  src: url("source/fonts/oswaldmedium.woff2") format("woff2");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "OswaldRegular";
+  src: url("source/fonts/oswaldregular.woff") format("woff");
+  src: url("source/fonts/oswaldregular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: normal;
+}
+body {
+  background: #F2F2F2;
+  font-family: "oswaldRegular", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+/*# sourceMappingURL=style.css.map */
