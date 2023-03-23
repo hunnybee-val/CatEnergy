@@ -4,12 +4,18 @@
 @import "global/global.scss";
 @import "global/fonts.scss";
 @import "global/variables.scss";
-
+@import "global/mixins.scss";
 
 
 
 //Blocks
 
+@import "blocks/main.scss";
 @import "blocks/header.scss";
 @import "blocks/page.scss";
+
+
+//index
+
+@import "blocks/index/intro.scss";
 

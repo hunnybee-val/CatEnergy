@@ -1,0 +1,12 @@
+.section-header{
+  @include medium-font;
+  font-size: 60px;
+  line-height: 60px;
+}
+
+.section-description{
+  @include regular-font;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+

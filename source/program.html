@@ -4,19 +4,15 @@
     <meta charset="utf-8">
     <title>Cat Energy – Главная</title>
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body" >
-    <header class="page_header">
-      <a class="page_header__logo">
+    <header class="page_header page_container">
+      <a href = "index.html" class="page_header__logo">
         <img src="img/logo-desktop%201.svg" alt="Кэт Энерджи" width="202" height="59">
       </a>
       <nav class="main_nav nav">
-        <button class="main-nav__toggle">
-          <span class="visually-hidden">
-            Открыть меню
-          </span>
-        </button>
-        <ul class="main-nav__list">
+        <ul class="main-nav_list">
           <li class="nav_list__item">
             <a class="nav_list__link" href="index.html">
               Главная
@@ -35,11 +31,11 @@
         </ul>
       </nav>
     </header>
-    <main class="page_main program-page">
-      <h1 class="page_main__title">
+    <main class="page_main program-page page_container">
+      <h1 class="page_main__title section-header">
         Подбор программы
       </h1>
-      <p class="form-description">
+      <p class="form-description section-description">
         Заполните анкету, и мы подберем программу питания для вашего кота
       </p>
       <section class="form-page">
@@ -138,12 +134,12 @@
               </li>
             </ul>
           </fieldset>
-          <input class="button" type="submit" value="Отправить заявку">
+          <input class="button" type="submit" value="Отправить заявку" >
           <span class="form__required-footnote">*-Обязательные поля</span>
         </form>
       </section>
     </main>
-    <footer class="page_footer">
+    <footer class="page_footer page_container">
       <section class="location">
         <h2 class="location__header">
           Приглашаем к сотрудничеству дилеров!

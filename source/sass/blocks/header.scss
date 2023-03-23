@@ -1,10 +1,35 @@
-.nav {
-  font-family: "OswaldRegular", sans-serif;
-  font-style: normal;
-  font-weight: normal;
+.page_header {
+  @include medium-font;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 110px;
+  font-size: 20px;
+  line-height: 30px;
 }
 
-body {
-  background: $base-grey;
-  @include oswaldRegular;
+.main-nav_list {
+  @include normalize-list;
+  display: flex;
+}
+
+.nav_list__item {
+  margin-right: 32px;
+  position: relative;
+  @include normalize-list-item;
+}
+
+.nav_list__link{
+  text-decoration: none;
+  color: black;
+}
+
+.active-page::after{
+  content: "";
+  position: absolute;
+  height: 2px;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  background: $base-green;
 }

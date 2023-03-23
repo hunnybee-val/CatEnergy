@@ -1,0 +1,26 @@
+.intro {
+  position: relative;
+  z-index: 2;
+}
+
+.intro::after {
+
+  content: url("source/img/index-background-desktop1.png");
+  position: absolute;
+  background: $base-grey;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.intro_header{
+  width: 414px;
+  text-wrap: normal;
+}
+
+.intro_program-link{
+  @include button();
+}
