@@ -26,3 +26,9 @@
   font-weight: 400;
 }
 
+@mixin arial(){
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+

@@ -1,0 +1,10 @@
+.product-description_steps-list {
+  @include normalize-list;
+
+}
+
+.product-description_steps-list__item{
+  @include normalize-list-item();
+  @include arial;
+  color: $dark-grey;
+}

@@ -393,7 +393,7 @@ template {
 
 .nav_list__link {
   text-decoration: none;
-  color: black;
+  color: inherit;
 }
 
 .active-page::after {
@@ -425,19 +425,37 @@ template {
   margin-left: 110px;
 }
 
+.location__header {
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.location__address {
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #444444;
+}
+
+.page-footer_wrapper {
+  background: #F2F2F2;
+}
+
 .intro {
   position: relative;
   z-index: 2;
 }
 
 .intro::after {
-  content: url("source/img/index-background-desktop1.png");
+  content: "";
   position: absolute;
-  background: #F2F2F2;
+  background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("http://localhost:3000/img/index-background-desktop1.png");
   left: 50%;
   top: 0;
   bottom: 0;
-  height: 100%;
+  height: auto;
   width: 100%;
   z-index: -1;
 }
@@ -457,5 +475,236 @@ template {
   color: white;
   background-color: #68B738;
   text-decoration: none;
+  box-sizing: content-box;
+}
+
+.users-goal {
+  background: #F2F2F2;
+}
+
+.users-goal__header {
+  padding: 0;
+  margin: 0;
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+}
+
+.users-goal__catalog-link {
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: inherit;
+  font-size: 20px;
+}
+
+.users-goal__description {
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.product-description_steps-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.product-description_steps-list__item {
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #444444;
+}
+
+.live-example {
+  background: #F2F2F2;
+}
+
+.live-example_description {
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #444444;
+}
+
+.stats__number {
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 37px;
+}
+
+.stats__description {
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #444444;
+}
+
+.stats__result {
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.products-list__item__order-button {
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  text-transform: uppercase;
+  padding: 14px 26px;
+  color: white;
+  background-color: #68B738;
+  text-decoration: none;
+  box-sizing: content-box;
+}
+
+.products-list__item__link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.products-list__item__title {
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #222222;
+}
+
+.characteristics {
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #444444;
+}
+
+.products-list__item__description {
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #444444;
+}
+
+.products-list__item__show-more-button {
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  text-transform: uppercase;
+  padding: 14px 26px;
+  color: black;
+  background-color: #F2F2F2;
+  text-decoration: none;
+  box-sizing: content-box;
+}
+
+.additional-products__title {
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+}
+
+.additional-products__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.additional-products__list.__item {
+  padding: 0;
+}
+
+.additional-products__list__item__title {
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #222222;
+}
+
+.additional-products__description {
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #444444;
+}
+
+.special-offer {
+  background: #68B738;
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: white;
+}
+
+.form_fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+  margin-bottom: 20px;
+}
+
+.form_fieldset__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.form-legend {
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+}
+
+.form_fieldset__list__item {
+  padding: 0;
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #444444;
+  text-transform: uppercase;
+}
+
+.additional-info__list__item {
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.form__submit-button {
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  text-transform: uppercase;
+  padding: 14px 26px;
+  color: white;
+  background-color: #68B738;
+  text-decoration: none;
+  box-sizing: content-box;
+  border: none;
+}
+
+.form__required-footnote {
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
 }
 /*# sourceMappingURL=style.css.map */

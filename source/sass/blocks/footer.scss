@@ -1,0 +1,13 @@
+.location__header {
+  @include regular-font;
+  font-size: 20px;
+}
+
+.location__address{
+  @include arial;
+  color: $dark-grey;
+}
+
+.page-footer_wrapper {
+  background: $base-grey;
+}

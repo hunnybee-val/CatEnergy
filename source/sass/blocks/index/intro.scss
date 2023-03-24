@@ -5,13 +5,18 @@
 
 .intro::after {
 
-  content: url("source/img/index-background-desktop1.png");
+  content: "";
   position: absolute;
-  background: $base-grey;
+  background: linear-gradient(
+                  rgba($base-green, 0.85),
+                  rgba($base-green, 0.85)
+              ),
+              url("http://localhost:3000/img/index-background-desktop1.png");
+
   left: 50%;
   top: 0;
   bottom: 0;
-  height: 100%;
+  height: auto;
   width: 100%;
   z-index: -1;
 }

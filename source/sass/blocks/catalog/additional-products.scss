@@ -1,0 +1,30 @@
+
+.additional-products__title{
+  @include regular-font;
+  font-size: 36px;
+}
+
+.additional-products__list {
+  @include normalize-list;
+  &.__item{
+    @include normalize-list-item;
+  }
+}
+
+.additional-products__list__item__title{
+  @include regular-font();
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #222222;
+}
+
+.additional-products__description{
+  @include arial();
+  color: #444444;
+}
+
+.special-offer {
+  background: $base-green;
+  @include arial();
+  color: white;
+}

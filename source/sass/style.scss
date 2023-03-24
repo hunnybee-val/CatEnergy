@@ -13,9 +13,23 @@
 @import "blocks/main.scss";
 @import "blocks/header.scss";
 @import "blocks/page.scss";
+@import "blocks/footer.scss";
 
 
 //index
 
 @import "blocks/index/intro.scss";
+@import "blocks/index/users-goal.scss";
+@import "blocks/index/product-description.scss";
+@import "blocks/index/live-example.scss";
+
+//catalog
+
+@import "blocks/catalog/products_list.scss";
+@import "blocks/catalog/additional-products.scss";
+
+
+//program
+
+@import "blocks/program/form-page";
 

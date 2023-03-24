@@ -1,0 +1,21 @@
+.users-goal {
+  background: $base-grey;
+}
+
+.users-goal__header{
+  padding: 0;
+  margin: 0;
+  @include regular-font();
+  font-size: 36px;
+}
+
+.users-goal__catalog-link{
+  @include regular-font();
+  text-transform: uppercase;
+  @include normalize-link;
+  font-size: 20px;
+}
+
+.users-goal__description{
+  @include arial;
+}
