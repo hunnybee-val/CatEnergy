@@ -1,13 +1,38 @@
+.location{
+}
+
+.location_wrapper{
+  background: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 .location__header {
   @include regular-font;
-  font-size: 20px;
+  font-size: 16px;
+  line-height: 20px;
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
 
 .location__address{
   @include arial;
-  color: $dark-grey;
+  font-size: 14px;
+  line-height: 20px;
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 .page-footer_wrapper {
   background: $base-grey;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }

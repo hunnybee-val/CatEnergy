@@ -1,6 +1,15 @@
 .product-description_steps-list {
   @include normalize-list;
+  display: grid;
+  grid-template-columns: 279px;
+  grid-gap: 20px;
 
+  @media (min-width: $tablet-width){
+    grid-template-columns: 279px 279px;
+  }
+  @media (min-width: $desktop-width){
+    grid-template-columns: 279px 279px 279px 279px;
+  }
 }
 
 .product-description_steps-list__item{

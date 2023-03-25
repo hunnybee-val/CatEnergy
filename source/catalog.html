@@ -2,33 +2,49 @@
 <html lang="ru" class="page">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cat Energy – Главная</title>
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body" >
     <header class="page_header page_container">
-      <a href = "index.html" class="page_header__logo">
-        <img src="img/logo-desktop%201.svg" alt="Кэт Энерджи" width="202" height="59">
-      </a>
+        <div class="page_header_logo_container">
+          <a href = "index.html" class="page_header__logo--desktop">
+            <img src="img/logo-desktop%201.svg" alt="Кэт Энерджи">
+          </a>
+          <a href = "index.html" class="page_header__logo--tablet">
+            <img src="img/logo-tablet.svg" alt="Кэт Энерджи">
+          </a>
+          <a href = "index.html" class="page_header__logo--mobile">
+            <img src="img/logo-mobile.svg" alt="Кэт Энерджи" width="33" height="59">
+          </a>
+          <a href = "index.html" class="page_header__logo--mobile">
+            <img src="img/footer-logo%202.svg" alt="Кэт Энерджи" width="101" height="auto">
+          </a>
+          <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      </div>
       <nav class="main-nav nav">
-        <ul class="main-nav_list">
-          <li class="nav_list__item">
-            <a class="nav_list__link" href="index.html">
-              Главная
-            </a>
-          </li>
-          <li class="nav_list__item">
-            <a class="nav_list__link active-page">
-              Каталог продукции
-            </a>
-          </li>
-          <li class="nav_list__item">
-            <a class="nav_list__link" href="program.html">
-              Подобрать программу
-            </a>
-          </li>
-        </ul>
+        <div class="main-nav__wrapper">
+
+          <ul class="main-nav_list">
+            <li class="nav_list__item">
+              <a class="nav_list__link" href="index.html">
+                Главная
+              </a>
+            </li>
+            <li class="nav_list__item">
+              <a class="nav_list__link active-page">
+                Каталог продукции
+              </a>
+            </li>
+            <li class="nav_list__item">
+              <a class="nav_list__link" href="program.html">
+                Подобрать программу
+              </a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
     <main class="page_main catalog-page page_container">
@@ -369,20 +385,22 @@
     </main>
     <footer class="page_footer page_container">
       <section class="location">
-        <img src="img/map.png" alt="Местоположение магазина">
-        <h2 class="location__header">
-          Приглашаем к сотрудничеству дилеров!
-        </h2>
-        <address class="location__address">
-          <span>
-            ул. Большая
-            Конюшенная, д. 19/8
-          </span>
-          <br>
-          <span>
-            Санкт-Петербург
-          </span>
-        </address>
+        <div class="location_wrapper">
+          <h2 class="location__header">
+            Приглашаем к сотрудничеству дилеров!
+          </h2>
+          <address class="location__address">
+            <span>
+              ул. Большая<br>
+              Конюшенная, д. 19/8
+            </span>
+            <br>
+            <span>
+              Санкт-Петербург
+            </span>
+          </address>
+        </div>
+        <img src="img/mobile-map.png" alt="Местоположение магазина">
       </section>
       <div class="page-footer_wrapper">
         <div class="page-footer__logo">

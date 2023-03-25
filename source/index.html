@@ -2,33 +2,49 @@
 <html lang="ru" class="page">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cat Energy – Главная</title>
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body" >
     <header class="page_header page_container">
-      <a href = "index.html" class="page_header__logo">
-        <img src="img/logo-desktop%201.svg" alt="Кэт Энерджи" width="202" height="59">
-      </a>
+      <div class="page_header_logo_container">
+        <a href = "index.html" class="page_header__logo--desktop">
+          <img src="img/logo-desktop%201.svg" alt="Кэт Энерджи">
+        </a>
+        <a href = "index.html" class="page_header__logo--tablet">
+          <img src="img/logo-tablet.svg" alt="Кэт Энерджи">
+        </a>
+        <a href = "index.html" class="page_header__logo--mobile">
+          <img src="img/logo-mobile.svg" alt="Кэт Энерджи" width="33" height="auto">
+        </a>
+        <a href = "index.html" class="page_header__logo--mobile">
+          <img src="img/footer-logo%202.svg" alt="Кэт Энерджи" width="101" height="auto">
+        </a>
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      </div>
       <nav class="main-nav nav">
-        <ul class="main-nav_list">
-          <li class="nav_list__item">
-            <a class="nav_list__link active-page">
-              Главная
-            </a>
-          </li>
-          <li class="nav_list__item">
-            <a class="nav_list__link" href="catalog.html">
-              Каталог продукции
-            </a>
-          </li>
-          <li class="nav_list__item">
-            <a class="nav_list__link" href="program.html">
-              Подобрать программу
-            </a>
-          </li>
-        </ul>
+        <div class="main-nav__wrapper">
+
+          <ul class="main-nav_list">
+            <li class="nav_list__item">
+              <a class="nav_list__link active-page">
+                Главная
+              </a>
+            </li>
+            <li class="nav_list__item">
+              <a class="nav_list__link" href="catalog.html">
+                Каталог продукции
+              </a>
+            </li>
+            <li class="nav_list__item">
+              <a class="nav_list__link" href="program.html">
+                Подобрать программу
+              </a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
     <main class="page_main page_container">
@@ -36,20 +52,21 @@
         Кэт Энерджи
       </h1>
       <section class="intro">
-        <h2 class="intro_header section-header">
-          Функциональное питание для котов
-        </h2>
-        <p class="intro_description section-description">
-          Занялся собой? Займись котом!
-        </p>
+          <h2 class="intro_header section-header">
+            Функциональное питание для котов
+          </h2>
+          <p class="intro_description section-description">
+            Занялся собой? Займись котом!
+          </p>
+
+        <img src="img/index-can.png" class="into__image" alt="Банка корма с курицей">
         <a href="program.html" class="intro_program-link button">
           Подобрать программу
         </a>
-        <img src="img/index-can.png" width="552" height="499" alt="Банка корма с курицей">
       </section>
       <section class="users-goal">
         <h2 class="visually-hidden">Подбор продуктов в зависимости от цели</h2>
-        <div class="users-goal">
+        <div class="users-goal__item">
           <h3 class="users-goal__header">
             Похудение
           </h3>
@@ -62,7 +79,7 @@
             Каталог Slim
           </a>
         </div>
-        <div class="users-goal">
+        <div class="users-goal__item">
           <h3 class="users-goal__header">
             Набор массы
           </h3>
@@ -107,53 +124,62 @@
         <h2 class="live-example__header section-header">
           Живой пример
         </h2>
-        <p class="live-example_description">
-          Борис сбросил 5 кг за 2 месяца, просто заменив свой
-          обычный корм на Cat Energy Slim. Отличный результат
-          без изнуряющих тренировок! При этом он не менял своих
-          привычек и по-прежнему спит по 16 часов в день.
-        </p>
-        <dl class="stats__list">
-          <div class="stats__item">
-            <dt class="stats__number">
-              5 кг
-            </dt>
-            <dd class="stats__description">
-              снижение веса
-            </dd>
+        <div class="live-example_wrapper">
+          <p class="live-example_description">
+            Борис сбросил 5 кг за 2 месяца, просто заменив свой
+            обычный корм на Cat Energy Slim. Отличный результат
+            без изнуряющих тренировок! При этом он не менял своих
+            привычек и по-прежнему спит по 16 часов в день.
+          </p>
+          <dl class="stats__list">
+            <div class="stats__item">
+              <dt class="stats__number">
+                5 кг
+              </dt>
+              <dd class="stats__description">
+                снижение веса
+              </dd>
+            </div>
+            <div class="stats__item">
+              <dt class="stats__number">
+                60 дней
+              </dt>
+              <dd class="stats__description">
+                затрачено времени
+              </dd>
+            </div>
+          </dl>
+          <span class="stats__result">Затраты на питание: 15 000 руб </span>
+          <div class="live-example_cat_wrapper">
+            <img src="img/cat-fat.png" alt="Борис до похудения" class="live-example__cat--before">
+            <img src="img/cat-skinny.png" alt="Борис после похудения" class="live-example__cat--after">
           </div>
-          <div class="stats__item">
-            <dt class="stats__number">
-              60 дней
-            </dt>
-            <dd class="stats__description">
-              затрачено времени
-            </dd>
+          <div class="live-example_slider">
+            <button class="live-example_slider__button">Было</button>
+            <button class="live-example_slider__button">Стало</button>
           </div>
-        </dl>
-        <span class="stats__result">Затраты на питание: </span>
-        <span class="stats__result">15 000 руб </span>
-        <img src="img/cat-fat.png" alt="Борис до похудения">
-        <img src="img/cat-skinny.png" alt="Борис после похудения">
+        </div>
       </section>
     </main>
     <footer class="page_footer page_container">
       <section class="location">
-        <img src="img/map.png" alt="Местоположение магазина">
-        <h2 class="location__header">
+        <div class="location_wrapper">
+          <h2 class="location__header">
 
-          Приглашаем к сотрудничеству дилеров!
-        </h2>
-        <address class="location__address">
-          <span>
-            ул. Большая
-            Конюшенная, д. 19/8
-          </span>
-          <br>
-          <span>
-            Санкт-Петербург
-          </span>
-        </address>
+            Приглашаем<br>к сотрудничеству<br>дилеров!
+          </h2>
+          <address class="location__address">
+            <span>
+              ул. Большая<br>
+              Конюшенная, д. 19/8
+            </span>
+            <br>
+            <span>
+              Санкт-Петербург
+            </span>
+          </address>
+        </div>
+        <img src="img/mobile-map.png" alt="Местоположение магазина">
       </section>
       <div class="page-footer_wrapper">
         <div class="page-footer__logo">
