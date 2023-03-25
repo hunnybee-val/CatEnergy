@@ -1,3 +1,20 @@
+.products_list{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 60px;
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (min-width: $desktop-width) {
+    grid-gap: 80px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.products-list__item{
+  background: $base-grey;
+}
+
 .products-list__item__order-button {
   @include button();
 }
@@ -16,14 +33,13 @@
 
 .characteristics{
   @include arial;
-  color: #444444;
 }
 
 .products-list__item__description{
   @include arial;
-  color: #444444;
 }
 
 .products-list__item__show-more-button{
-  @include button-grey;//доработать
+  @include button-grey; //доработать
 }
+

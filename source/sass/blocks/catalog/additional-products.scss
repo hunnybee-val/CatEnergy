@@ -1,7 +1,17 @@
 
+
+
 .additional-products__title{
   @include regular-font;
   font-size: 36px;
+}
+
+.additional-products_wrapper{
+  display: grid;
+  grid-template-columns: 1fr;
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .additional-products__list {
@@ -20,11 +30,24 @@
 
 .additional-products__description{
   @include arial();
-  color: #444444;
 }
 
 .special-offer {
-  background: $base-green;
+  background: linear-gradient(
+                  rgba($base-green, 0.85),
+                  rgba($base-green, 0.85)
+              ),
+              url("http://localhost:3000/img/cat-capsule.png");
+  height: 289px;
   @include arial();
   color: white;
+  position: relative;
+  margin: 20px;
+}
+
+.special-offer__description{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
