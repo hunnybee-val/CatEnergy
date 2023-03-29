@@ -5,7 +5,7 @@
 
 ---
 
-[source/index.html](website)
+[web](source/index.html)
 
 **Обратите внимание, что папка с вашими исходными файлами — `source/`.**
 
