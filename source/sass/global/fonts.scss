@@ -15,23 +15,29 @@
 }
 
 //mixins
-@mixin medium-font(){
+@mixin medium-font($size: 36px, $line: $size){
   font-family: "Oswald", sans-serif;
   font-style: normal;
   font-weight: 400;
+  font-size: $size;
+  line-height: $line;
 }
 
 
-@mixin regular-font(){
+@mixin regular-font($size: 14px, $line: $size){
   font-family: "Oswald", sans-serif;
   font-style: normal;
   font-weight: 400;
+  font-size: $size;
+  line-height: $line;
 }
 
-@mixin arial(){
+@mixin arial($size: 14px, $line: $size){
   font-family: "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   color: $dark-grey;
+  font-size: $size;
+  line-height: $line;
 }
 

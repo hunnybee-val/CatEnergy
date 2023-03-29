@@ -3,32 +3,34 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cat Energy – Главная</title>
+    <title>Cat Energy – Подобрать программу</title>
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body" >
-    <header class="page_header page_container">
-      <div class="page_header_logo_container">
-        <a href = "index.html" class="page_header__logo--desktop">
-          <img src="img/logo-desktop%201.svg" alt="Кэт Энерджи">
-        </a>
-        <a href = "index.html" class="page_header__logo--tablet">
-          <img src="img/logo-tablet.svg" alt="Кэт Энерджи">
-        </a>
-        <a href = "index.html" class="page_header__logo--mobile">
-          <img src="img/logo-mobile.svg" alt="Кэт Энерджи" width="33" height="auto">
-        </a>
-        <a href = "index.html" class="page_header__logo--mobile">
-          <img src="img/footer-logo%202.svg" alt="Кэт Энерджи" width="101" height="auto">
-        </a>
-        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-      </div>
-      <nav class="main-nav nav">
+    <header class="page_header">
+      <nav class="main-nav nav main-nav--closed main-nav--nojs">
+        <div class="page_header_logo_container  page_container">
+          <a href = "index.html" class="page_header__logo--desktop">
+            <img src="img/logo-desktop%201.svg" alt="Кэт Энерджи">
+          </a>
+          <a href = "index.html" class="page_header__logo--tablet">
+            <img src="img/logo-tablet.svg" alt="Кэт Энерджи">
+          </a>
+          <a href = "index.html" class="page_header__logo--mobile">
+            <img src="img/logo-mobile.svg" class="logo" alt="Кэт Энерджи" width="33" height="auto">
+          </a>
+          <a href = "index.html" class="page_header__logo--mobile">
+            <img src="img/footer-logo%202.svg" alt="Кэт Энерджи" width="101" height="auto">
+          </a>
+          <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        </div>
+
         <div class="main-nav__wrapper">
+
           <ul class="main-nav_list">
             <li class="nav_list__item">
-              <a class="nav_list__link" href="index.html">
+              <a class="nav_list__link " href="index.html">
                 Главная
               </a>
             </li>
@@ -155,6 +157,11 @@
     </main>
     <footer class="page_footer page_container">
       <section class="location">
+        <script
+          type="text/javascript"
+          charset="utf-8"
+          async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A913849f896e37050b2dcb9d3a2ea017fe0d0745c5fa78104811b96b3bb0b9d64&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true">
+        </script>
         <div class="location_wrapper">
           <h2 class="location__header">
             Приглашаем<br>к сотрудничеству<br>дилеров!
@@ -170,7 +177,7 @@
             </span>
           </address>
         </div>
-        <img src="img/mobile-map.png" alt="Местоположение магазина">
+<!--        <img src="img/mobile-map.png" alt="Местоположение магазина">-->
       </section>
       <div class="page-footer_wrapper">
         <div class="page-footer__logo">
@@ -195,5 +202,21 @@
         </div>
       </div>
     </footer>
+    <script>
+        var navMain = document.querySelector('.main-nav');
+        var navToggle = document.querySelector('.main-nav__toggle');
+
+        navMain.classList.remove('main-nav--nojs');
+
+        navToggle.addEventListener('click', function() {
+            if (navMain.classList.contains('main-nav--closed')) {
+                navMain.classList.remove('main-nav--closed');
+                navMain.classList.add('main-nav--opened');
+            } else {
+                navMain.classList.add('main-nav--closed');
+                navMain.classList.remove('main-nav--opened');
+            }
+        });
+    </script>
   </body>
 </html>

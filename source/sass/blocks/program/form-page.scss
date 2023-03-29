@@ -1,3 +1,32 @@
+.form {
+  display: grid;
+  grid-template-areas:
+            "cat-info"
+            "cat-goal"
+            "owner-info"
+            "commentary"
+            "additional-info"
+            "button"
+            "footnote";
+  @media (min-width: $tablet-width) {
+    grid-template-areas:
+            "cat-info cat-info"
+            "cat-goal cat-goal"
+            "owner-info owner-info"
+            "commentary commentary"
+            "additional-info additional-info"
+            "button footnote";
+  }
+  @media (min-width: $desktop-width) {
+    grid-template-areas:
+            "cat-info cat-goal"
+            "owner-info owner-info"
+            "commentary commentary"
+            "additional-info additional-info"
+            "button footnote";
+  }
+}
+
 .form_fieldset{
   @include normalize-fieldset;
   margin-bottom: 20px;
@@ -33,4 +62,52 @@
 .form__required-footnote{
   @include arial();
   font-size: 16px;
+}
+
+.form_cat-info{
+  grid-area: cat-info;
+}
+
+.form_cat-goal{
+  grid-area: cat-goal;
+}
+
+.form_owner-info{
+  grid-area: owner-info;
+}
+
+.owner-info__list{
+  display: grid;
+  grid-template-columns: 1fr;
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.form_commentary{
+  grid-area: commentary;
+}
+
+.form_additional-info{
+  grid-area: additional-info;
+
+}
+
+.additional-info__list{
+  display: grid;
+  grid-template-columns: 1fr;
+  @media (min-width: $tablet-width) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.form__submit-button{
+  grid-area: button;
+}
+
+.form__required-footnote{
+  grid-area: footnote;
 }

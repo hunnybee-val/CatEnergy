@@ -1,12 +1,16 @@
 .section-header{
-  @include medium-font;
-  font-size: 60px;
-  line-height: 60px;
+  margin: 0;
+  margin-bottom: 40px;
+  @include medium-font(36px, 40px);
+  @media (min-width: $tablet-width) {
+    margin-bottom: 72px;
+    @include medium-font(60px);
+  }
 }
 
 .section-description{
+  margin: 0;
   @include regular-font;
-  font-size: 20px;
   text-transform: uppercase;
 }
 

@@ -1,14 +1,26 @@
+.product-description{
+  margin-bottom: 49px;
+  @media (min-width: $tablet-width) {
+    margin-bottom: 104px;
+  }
+  @media (min-width: $desktop-width) {
+    margin-bottom: 26px;
+  }
+}
+
 .product-description_steps-list {
   @include normalize-list;
   display: grid;
-  grid-template-columns: 279px;
+  grid-template-columns: 1fr;
   grid-gap: 20px;
-
   @media (min-width: $tablet-width){
-    grid-template-columns: 279px 279px;
+    grid-template-columns: 250px 250px;
+    column-gap: 137px;
+    row-gap: 134px;
   }
   @media (min-width: $desktop-width){
-    grid-template-columns: 279px 279px 279px 279px;
+    column-gap: 123px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 
@@ -16,4 +28,83 @@
   @include normalize-list-item();
   @include arial;
   color: $dark-grey;
+  display: grid;
+  column-gap: 20px;
+  grid-template-columns: 60px 1fr;
+  align-items: center;
+  position: relative;
+
+  @media (min-width: $tablet-width){
+    grid-template-columns: 1fr;
+    row-gap: 31px;
+    @for $i from 1 through 4 {
+      &:nth-child(#{$i})::after {
+        position: absolute;
+        content: "#{$i}";
+        @include medium-font(280px);
+        color: $base-grey;
+        right: 0;
+        top: -40px;
+      }
+    }
+  }
 }
+.product-description_steps-list__item__icon{
+  width: 60px;
+  height: 60px;
+  background: $base-green;
+  position: relative;
+  z-index: 1;
+  @media (min-width: $tablet-width){
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.product-description_steps-list__item__icon::after{
+  @media (min-width: $tablet-width) {
+    height: 33px;
+    width: auto;
+  }
+}
+
+.product-description_steps-list__item:nth-child(1) .product-description_steps-list__item__icon::after{
+  content: url("http://localhost:3000/img/icons/steps-list/icon_leaf.svg");
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+.product-description_steps-list__item:nth-child(2) .product-description_steps-list__item__icon::after{
+  content: url("http://localhost:3000/img/icons/steps-list/icon_tub.svg");
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.product-description_steps-list__item:nth-child(3) .product-description_steps-list__item__icon::after{
+  content: url("http://localhost:3000/img/icons/steps-list/icon_eat.svg");
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.product-description_steps-list__item:nth-child(4) .product-description_steps-list__item__icon::after{
+  content: url("http://localhost:3000/img/icons/steps-list/icon_alarm.svg");
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.product-description_steps-list__item__text{
+  margin: 0;
+  @include arial(14px, 18px);
+  @media (min-width: $tablet-width) {
+    @include arial(16px, 24px);
+    z-index: 1;
+  }
+}
+

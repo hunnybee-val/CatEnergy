@@ -2,46 +2,143 @@
   display: grid;
   grid-gap: 20px;
   grid-template-columns: 1fr;
-  margin: 20px;
   justify-content: center;
   justify-items: center;
+  margin-bottom: 20px;
+  @media (min-width: $tablet-width) {
+    margin-bottom: 45px;
+  }
   @media (min-width: $desktop-width) {
     grid-template-columns: 1fr 1fr;
+    margin-bottom: 71px;
   }
 }
 
 .users-goal__item{
+  box-sizing: border-box;
   background: $base-grey;
-
-  padding: 20px;
+  padding: 24px 20px;
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  column-gap: 19px;
+  grid-template-areas:
+          "icon header"
+          "description description"
+          "link link";
   @media (min-width: $tablet-width) {
-    width: 708px;
+    padding: 77px 52px;
+    grid-template-columns: 1fr 200px;
+    column-gap: 56px;
+    grid-template-areas:
+          "header icon"
+          "description icon"
+          "link icon";
   }
   @media (min-width: $desktop-width) {
-    width: 570px;
+    padding: 52px 47px;
+    grid-template-columns: 100px 1fr;
+    column-gap: 62px;
+    grid-template-areas:
+          "icon header"
+          "description description"
+          "link link";
+  }
+
+}
+
+.users-goal__header {
+  padding: 0;
+  margin: 0;
+  @include regular-font(24px, 37px);
+  text-transform: uppercase;
+  grid-area: header;
+  align-self: center;
+  @media (min-width: $tablet-width) {
+    @include regular-font(36px);
   }
 }
 
-.users-goal__header{
-  padding: 0;
-  margin: 0;
-  @include regular-font();
-  font-size: 36px;
+.users-goal__icon{
+  grid-area: icon;
+  background-image: url("http://localhost:3000/img/icons/green-circle.svg");
+  background-repeat: no-repeat;
+  position: relative;
+
+  background-size: contain;
+  &--lose-weight{
+    content: url("http://localhost:3000/img/icons/lose-weight.svg");
+    width: 50px;
+    height: 50px;
+    @media (min-width: $tablet-width) {
+      width: 200px;
+      height: 200px;;
+    }
+    @media (min-width: $desktop-width) {
+      width: 100px;
+      height: 100px;
+    }
+  }
+  &--gain-weight{
+    content: url("http://localhost:3000/img/icons/gain-weight.svg");
+    background-position: center;
+    width: 67px;
+    height: 50px;
+    left: -8px;
+    @media (min-width: $tablet-width) {
+      width: 268px;
+      height: 200px;
+      left: -36px;
+    }
+    @media (min-width: $desktop-width) {
+      width: 134px;
+      height: 100px;
+      left: -19px;
+    }
+  }
 }
 
+
 .users-goal__description{
-  font-size: 16px;
-  line-height: 24px;
-  @include arial;
+  @include arial(14px, 18px);
+  margin: 0;
+  margin-top: 22px;
+  margin-bottom: 42px;
+  position: relative;
+  grid-area: description;
+  &::after{
+    position: absolute;
+    content: "";
+    height:1px;
+    right: 0;
+    left: 0;
+    bottom: -23px;
+    background-color: $decorative-grey;
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+  @media (min-width: $tablet-width) {
+    @include arial(16px, 24px);
+    margin-top: 24px;
+    margin-bottom: 52px;
+  }
+  @media (min-width: $desktop-width) {
+    margin-top: 39px;
+    margin-bottom: 27px;
+  }
 }
 
 .users-goal__catalog-link{
-  @include regular-font();
+  @include regular-font(16px);
   text-transform: uppercase;
   @include normalize-link;
-  font-size: 20px;
+  grid-area: link;
+  &::after{
+    content: url("http://localhost:3000/img/icons/arrow.svg");
+    margin-left: 15px;
+  }
+  @media (min-width: $tablet-width) {
+    @include regular-font(20px, 30px);
+  }
 }
 
-.users-goal__description{
-  @include arial;
-}

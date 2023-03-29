@@ -1,5 +1,8 @@
-.intro {
+.intro{
   position: relative;
+}
+
+.intro .page_container{
   z-index: 2;
   color: white;
   display: grid;
@@ -9,23 +12,23 @@
                       "button";
   justify-content: center;
   justify-items: center;
+  margin-bottom: 20px;
   @media (min-width: $tablet-width){
     color: black;
-    grid-template-areas: "header"
-                      "description"
-                      "button"
-                      "image";
+    grid-template-areas: "header header"
+                      "description description"
+                      "button image";
     justify-items: start;
   }
 
-  @media (min-width: $desktop-width){
-    grid-template-areas: "header image"
-                      "description image"
-                      "button image";
-  }
+  //@media (min-width: $desktop-width){
+  //  grid-template-areas: "header image"
+  //                    "description image"
+  //                    "button image";
+  //}
 }
 
-.intro::after {
+.intro .page_container::after {
 
   content: "";
   position: absolute;
@@ -33,60 +36,108 @@
                   rgba($base-green, 0.85),
                   rgba($base-green, 0.85)
               ),
-              url("http://localhost:3000/img/index-background-desktop1.png");
-
+              url("http://localhost:3000/img/index-background-desktop2.png");
+  background-size: cover;
+  background-position: -50%;
   left:0 ;
-  right: 0;
   bottom: 0;
   top: 0;
-  height: auto;
+  height: 302px;
   width: 100%;
   z-index: -1;
   @media (min-width: $tablet-width){
     display: none;
   }
   @media (min-width: $desktop-width){
-    display: block;
+    display: none;
+    background: linear-gradient(
+                    rgba($base-green, 0.85),
+                    rgba($base-green, 0.85)
+    ),
+    url("http://localhost:3000/img/index-background-desktop1.png");
+
+    left: 50%;
+    top: -300px;
+    height: calc(100% + 300px);
+
   }
 }
 
 
 
 .intro_header{
-  width: 414px;
+  margin-top: 25px;
+  margin-bottom: 27px;
+  @include medium-font();
+
   text-wrap: normal;
   grid-area: header;
   text-align: center;
   @media (min-width: $tablet-width) {
     text-align: left;
+    @include medium-font(60px);
+    margin-top: 0;
+    margin-bottom: 41px;
+    margin-left: 87px;
+  }
+  @media (min-width: $desktop-width) {
+    margin-bottom: 40px;
+    margin-left: 80px;
   }
 }
 
 .intro_description{
   grid-area: description;
+  @include regular-font();
   text-align: center;
+  margin: 0;
+  margin-bottom: 29px;
   @media (min-width: $tablet-width) {
     text-align: left;
+    @include regular-font(20px);
+    margin-bottom: 20px;
+    margin-left: 87px;
+  }
+  @media (min-width: $desktop-width) {
+    margin-bottom: 52px;
+    margin-left: 80px;
+  }
+}
+
+.intro__image{
+  display: inline-block;
+  width: 280px;
+  height: auto;
+  align-self: center;
+  grid-area: image;
+  @media (min-width: $tablet-width) {
+    width: 709px;
+    grid-area: button;
+  }
+  @media (min-width: $desktop-width) {
+    width: 552px;
+    grid-area: image;
+    //margin-left: -25px;
+    margin-top: calc(-552px / 2);
   }
 }
 
 .intro_program-link{
   @include button();
-  width: 100%;
   height: 26px;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  grid-area: button;
+  width: 100%;
+  z-index: 1;
   @media (min-width: $tablet-width){
     width: 244px;
+    @include button(20px, 14px, 26px);
+    margin-top: 29px;
+    margin-left: 87px;
+  }
+  @media (min-width: $desktop-width) {
+    margin-top: 0;
+    margin-left: 80px;
   }
 }
 
-.into__image{
-  grid-area: image;
-  @media (min-width: $tablet-width){
-    order: 2;
-  }
-}
+
 
